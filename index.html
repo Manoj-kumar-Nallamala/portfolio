@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Styling for the body */
+            display: flex; /* Flex layout to position elements */
+            min-height: 100vh; /* Full height */
+            margin: 0; /* Remove default margin */
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%; /* Full width */
+            position: absolute; /* Absolute positioning */
+            top: 0; /* Stick to the top */
+        }
+        nav {
+            flex: 1;
+            background: #f4f4f4; /* Light grey background */
+            height: 100vh; /* Full view height */
+            padding: 20px; /* Padding around the links */
+            display: flex;
+            flex-direction: column; /* Vertical navigation */
+            justify-content: center; /* Center the links vertically */
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 10px 0; /* Vertical spacing */
+        }
+        .content {
+            flex: 3;
+            padding: 60px 20px 20px; /* Padding to make space from the fixed header */
+        }
+        .profile-pic {
+            width: 300px; /* Larger profile picture */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0; /* Remove roundness */
+            display: block; /* Block display to fill the container */
+            margin-left: auto; /* Push to the right */
+        }
+        footer {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0; /* Stick to the bottom */
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manoj Kumar Nallamala</h1>
+    </header>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#academics">Academics</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="content">
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Details about your projects will go here.</p>
+        </section>
+        <!-- Further sections can be added similarly -->
+    </div>
+    <footer>
+        <p>Contact me at: <a href="mailto:manojnallamala98@gmail.com">manojnallamala98@gmail.com</a></p>
+    </footer>
+</body>
+</html>
