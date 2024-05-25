@@ -1,12 +1,9 @@
 body {
-    font-family: 'Arial', sans-serif;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
-    padding-top: 60px;
-    background-color: #f9f9f9; /* Light gray background for a subtle look */
+    padding-top: 60px; /* Adjust if your header height changes */
+    font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -24,31 +21,27 @@ header {
 
 
 nav {
-    flex: 1;
-    background: #ffffff; /* Pure white background for contrast */
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 40px 40px 80px;
-    position: sticky;
-    top: 60px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Soft shadow to the right of the menu */
+    width: 350px; /* Fixed width for the sidebar navigation */
+    flex-shrink: 0; /* Prevents the nav from shrinking */
+    height: calc(100vh - 60px); /* Full height minus header */
+    overflow-y: auto; /* Allows scrolling on smaller screens */
+    background: #f4f4f4; /* Background color for the nav */
+    padding: 20px; /* Padding inside the nav */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Shadow for a subtle depth effect */
 }
 
 nav a {
     text-decoration: none;
-    color: #2c3e50; /* Dark blue to match the header */
-    font-size: 18px; /* Slightly larger font for better readability */
-    padding: 12px; /* Increased padding for a better touch response */
-    display: block;
-    margin: 15px 0; /* Increased space between links */
-    transition: color 0.3s, background-color 0.3s; /* Smooth transition for both color and background */
+    color: #333;
+    display: block; /* Makes each link occupy its own row */
+    padding: 45px 20px 0px 50px; /* Increases padding around each link */
+    margin: 5px 0; /* Adds a slight margin for visual separation between links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
 }
 
 nav a:hover {
-    color: #ffffff; /* White text on hover */
-    background-color: #3498db; /* Light blue background on hover */
+    background-color: #e2e2e2; /* Slight highlight on hover */
+    color: #000; /* Changes color for better visibility */
 }
 
 
@@ -111,32 +104,23 @@ footer {
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    flex-grow: 1; /* Takes up the remaining width */
+    display: flex;
+    flex-direction: column; /* Aligns projects vertically */
+    align-items: center; /* Centers projects cards horizontally */
     padding: 20px;
-}
-
-.main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for larger min width if needed */
-    gap: 20px;
-    padding: 40px; /* Ensures padding around the grid */
-    justify-content: center; /* Centers the grid items if they don't fill the full width */
+    overflow-y: auto; /* Allows scrolling within the project section */
 }
 
 .project-card {
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%; /* Takes full width of the main content area */
+    max-width: 800px; /* Maximum width of the project cards */
+    margin: 20px 0; /* Space between cards */
     padding: 20px;
-    border-radius: 8px;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns content to the start */
-    max-width: 600px; /* Sets a maximum width for each card */
-    margin: auto; /* Centers the card in the grid cell */
-}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}}
 
 .project-card h3 {
     color: #3498db;
