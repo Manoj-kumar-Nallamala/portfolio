@@ -26,7 +26,7 @@ header {
 nav {
     flex: 1;
     background: #ffffff; /* Pure white background for contrast */
-    height: calc(100vh - 60px);
+    height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -117,32 +117,50 @@ footer {
     padding: 20px;
 }
 
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for larger min width if needed */
+    gap: 20px;
+    padding: 40px; /* Ensures padding around the grid */
+    justify-content: center; /* Centers the grid items if they don't fill the full width */
+}
+
 .project-card {
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the start */
+    max-width: 600px; /* Sets a maximum width for each card */
+    margin: auto; /* Centers the card in the grid cell */
 }
 
 .project-card h3 {
     color: #3498db;
     margin-top: 0;
+    width: 100%; /* Ensures the title spans the full width of the card */
 }
 
 .project-link {
     color: #007BFF;
     text-decoration: none;
+    align-self: center; /* Centers the link within the card */
 }
 
 .project-date {
     font-size: 0.9em;
     color: #666;
+    margin-bottom: 10px; /* Adds space below the date */
 }
 
 .project-details {
     margin: 10px 0;
+    width: 100%; /* Ensures the list uses the full width of the card */
 }
+
 
 
 
