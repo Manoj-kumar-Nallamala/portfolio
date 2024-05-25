@@ -9,7 +9,7 @@ body {
 header {
     background: #2c3e50; /* Darker shade of gray-blue */
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -59,12 +59,17 @@ nav a:hover {
 
 
 .profile-pic {
-    width: 300px;
-    height: auto;
-    padding: 80px 40px 40px 80px;
-    margin-left: auto;
-    margin-right: 20px;
+    width: 300px;         /* Set a fixed width */
+    height: auto;         /* Maintain aspect ratio */
+    object-fit: contain;  /* Ensures the image fits within the dimensions set, without being cropped or stretched */
+    padding: 0;           /* No padding around the image */
+    margin: 0 auto 40px;  /* Removes top margin, centers the image horizontally, retains bottom margin */
+    display: block;       /* Ensures the image is treated as a block-level element, aiding in centering */
 }
+
+
+
+
 
 footer {
     text-align: center;
@@ -99,7 +104,8 @@ footer {
         padding: 40px 20px; /* Sufficient padding on smaller screens */
     }
     .profile-pic {
-        order: 3;
+        width: 200px;       /* Smaller width on smaller screens */
+        margin: 0 auto 20px;/* Less margin on smaller screens */
     }
 }
 
