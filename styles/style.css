@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background: #2c3e50; /* Darker shade of gray-blue */
-    color: #fff;
+    background: #26221d7b; /* Matching the header */
+    color: #1a1a1a;
     padding: 10px 10px;
     text-align: center;
     position: fixed;
@@ -77,8 +77,9 @@ footer {
     position: fixed;
     bottom: 0;
     padding: 10px 0;
-    background: #2c3e50; /* Matching the header */
-    color: #fff;
+    
+    background: #26221d7b; /* Matching the header */
+    color: #1a1a1a;
 }
 
 
@@ -146,7 +147,7 @@ footer {
     margin-bottom: 10px; /* Adds space below the date */
 }
 
-.project-details {
+.project-details,.experience-block {
     font-family: 'Lato', sans-serif; /* Elegant and readable font */
     font-size: 1.1em; /* Slightly larger font size for better readability */
     color: #333; /* Darker text for contrast */
@@ -190,6 +191,36 @@ footer {
 }
 
 
+.research-block {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.research-block h2 {
+    color: #3498db;
+}
+
+.research-block p {
+    font-size: 16px;
+    color: #666;
+}
+
+.research-block ul {
+    list-style-type: none; /* Removes the default list style */
+    padding: 0;
+}
+
+.research-block li {
+    padding: 10px 0; /* Adds vertical padding for readability */
+    border-bottom: 1px solid #eee; /* Adds a subtle separator between items */
+}
+
+.research-block li:last-child {
+    border-bottom: none; /* Removes the bottom border from the last item */
+}
 
 
 
