@@ -45,7 +45,7 @@
         
         <div class="project-card">
             <h3>Shortest Job First (SJF) Scheduling Algorithm</h3>
-            <p class="project-date">Project Duration: Specific dates not provided</p>
+            <p class="project-date">January 2020 - May 2020</p>
             <ul class="project-details">
                 <li>Developed an optimal SJF scheduling algorithm for minimizing average waiting time in CPU process scheduling.</li>
                 <li>Utilized techniques such as Linear Regression and other statistical methods to predict CPU burst times based on historical data.</li>
@@ -59,17 +59,51 @@
 
             <p class="project-link">Project is private and not available on GitHub</p>
         </div>
-        
         <div class="project-card">
-            <h3>Project Title</h3>
-            <p class="project-date">Start Date - End Date</p>
+            <h3>Fault-Tolerant 2-Phase Distributed Commit Protocol Implementation</h3>
+            <p class="project-date">Duration: Not specified</p>
             <ul class="project-details">
-                <li>Brief detail about the project.</li>
-                <li>Technologies used: HTML, CSS, JavaScript.</li>
-                <li>Outcome of the project.</li>
-                <li>Challenges faced during the project.</li>
+                <li>Implemented a fault-tolerant version of the 2-phase commit (2PC) protocol to handle node crashes and ensure transaction integrity.</li>
+                <li>Designed with a Transaction Coordinator (TC) and multiple participant nodes to manage transaction commitments and recoveries.</li>
+                <li>Utilized Python for scripting the transaction coordination and participant node interactions within a distributed system.</li>
+                <!-- Initially hidden items -->
+                <li class="more-info">Enhanced system resilience by handling failures at various stages, including before and after sending 'prepare' messages.</li>
+                <li class="more-info">Implemented comprehensive testing scenarios to validate the system's robustness against node and coordinator failures.</li>
+                <li class="more-info">Developed recovery mechanisms for nodes and the transaction coordinator to ensure consistent transaction states across the distributed network.</li>
             </ul>
-            <a href="https://github.com/yourusername/project-link" class="project-link">View on GitHub</a>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+            <a href="https://github.com/Manoj-kumar-Nallamala/Fully_Fault_tolerant_2-PhaseCommit/tree/master" class="project-link">View on GitHub</a>
+            
+        </div>
+        <div class="project-card">
+            <h3>Event Search and Recommendation Engine</h3>
+            <p class="project-date">Full Stack Project Powered by TicketMaster</p>
+            <ul class="project-details">
+                <li>Utilizes TicketMaster API to recommend events based on user's geo-location.</li>
+                <li>Deployed on Amazon EC2, featuring a fully functional user interface for event interaction.</li>
+                <li>Technologies used: HTML/CSS/JavaScript, JAVA, MySQL/MongoDB.</li>
+                <!-- Initially hidden items -->
+                <li class="more-info">Content-based recommendation system suggests events by analyzing user preferences and proximity.</li>
+                <li class="more-info">Includes robust error handling and recovery mechanisms to ensure transaction integrity during node failures.</li>
+                <li class="more-info">Advanced user authentication system to ensure secure access and data integrity.</li>
+            </ul>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+            <a href="https://github.com/Manoj-kumar-Nallamala/Event-Search-Recommendation-Engine/tree/master" class="project-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>ConvexHull Algorithm Implementation</h3>
+            <p class="project-date">Algorithms: Divide and Conquer, Graham's Scan, Jarvis March</p>
+            <ul class="project-details">
+                <li>Implemented various Convex Hull algorithms in C++ using CLion IDE.</li>
+                <li>Algorithms include Divide and Conquer, Graham's Scan, and Jarvis March.</li>
+                <li>Configurable input sizes for benchmarking algorithm performance.</li>
+                <!-- Initially hidden items -->
+                <li class="more-info">Detailed setup instructions available for CLion configuration and project import.</li>
+                <li class="more-info">Includes guidance for modifying input datasets from 100 points to 1000 points to evaluate performance scalability.</li>
+                <li class="more-info">Source code structured for easy customization and further development.</li>
+            </ul>
+            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+            <a href="https://github.com/Manoj-kumar-Nallamala/Convex_Hull/tree/main" class="project-link">View on GitHub</a>
         </div>
         <!-- Repeat for other projects -->
     </main>
@@ -78,20 +112,22 @@
         <p>Contact me at: <a href="mailto:manojnallamala98@gmail.com">manojnallamala98@gmail.com</a></p>
     </footer>
     <script>
-        function toggleReadMore() {
-            var moreInfoElements = document.querySelectorAll('.more-info');
-            var readMoreBtn = document.querySelector('.read-more-btn');
-    
+        function toggleReadMore(btn) {
+            var projectCard = btn.closest('.project-card'); // Find the nearest parent project card
+            var moreInfoElements = projectCard.querySelectorAll('.more-info'); // Select only .more-info within this card
+            var readMoreBtn = projectCard.querySelector('.read-more-btn'); // Select only the read more button within this card
+            
             moreInfoElements.forEach(element => {
                 if (element.style.display === 'none') {
-                    element.style.display = 'list-item';
-                    readMoreBtn.textContent = 'Read less';
+                    element.style.display = 'list-item'; // Show additional details
+                    readMoreBtn.textContent = 'Read less'; // Change button text to 'Read less'
                 } else {
-                    element.style.display = 'none';
-                    readMoreBtn.textContent = 'Read more';
+                    element.style.display = 'none'; // Hide additional details
+                    readMoreBtn.textContent = 'Read more'; // Change button text back to 'Read more'
                 }
             });
         }
         </script>
+        
 </body>
 </html>
