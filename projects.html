@@ -24,13 +24,21 @@
             <h3>Lane Detection for Autonomous Vehicles</h3>
             <p class="project-date">January 2023 - May 2023</p>
             <ul class="project-details">
-                <li>Developed a lane detection system designed to enhance navigation in autonomous vehicles.</li>
-                <li>Technologies used: Python, OpenCV, Machine Learning.</li>
-                <li>Outcome of the project: Successfully integrated with a simulated autonomous driving system to detect and track road lanes in real time under various lighting conditions.</li>
-                <li>Challenges faced during the project: Overcoming issues with detecting lanes under low light conditions and distinguishing between different types of lane markings.</li>
+                <li>Developed a lane detection system designed to enhance navigation in autonomous vehicles using Python, OpenCV, and Machine Learning.</li>
+                <li>Implemented a lane detection algorithm utilizing Sobel edge detection, sliding window search, and polynomial curve fitting, adapting effectively to various lane markings and reducing computational demand.</li>
+                <li>Successfully evaluated and optimized the algorithm to achieve real-time performance, demonstrating up to 25.6 frames per second across different lane types on a moderate computational setup.</li>
+                <li class="more-info">Demonstrated robustness in diverse driving conditions, efficiently balancing accuracy and computational complexity, and visually rendering lanes on original images to support advanced driver assistance systems.</li>
+                <li class="more-info">Addressed challenges in detecting discontinuous or missing lane markings and accurately identifying lanes on curved roads, with plans to integrate additional sensors like lidar or infrared to enhance low-visibility conditions performance.</li>
+                <li class="more-info">Applied advanced computer vision techniques such as perspective transformation and color thresholding to improve the accuracy of lane boundary identification.</li>
+                <li class="more-info">Integrated sophisticated image processing workflows to handle real-time video streams effectively, crucial for autonomous vehicle systems deployment.</li>
+                <li class="more-info">Outcome of the project: Successfully integrated with a simulated autonomous driving system to detect and track road lanes in real time under various lighting conditions.</li>
+                <li class="more-info">Planned future enhancements include adopting deep learning models to improve the detection of complex lane markings and expand capabilities in challenging driving scenarios such as intersections and heavy traffic.</li>
+                <li class="more-info">Challenges faced during the project: Overcoming issues with detecting lanes under low light conditions and distinguishing between different types of lane markings.</li>
             </ul>
-            <a href="https://github.com/Manoj-kumar-Nallamala/Lane-Detection" class="project-link">View on GitHub</a>
+            <button class="read-more-btn" onclick="toggleReadMore()">Read more</button>
+            <a href="https://github.com/Manoj-kumar-Nallamala/Lane-Detection" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
+        
         
         <div class="project-card">
             <h3>Project Title</h3>
@@ -60,5 +68,21 @@
     <footer>
         <p>Contact me at: <a href="mailto:manojnallamala98@gmail.com">manojnallamala98@gmail.com</a></p>
     </footer>
+    <script>
+        function toggleReadMore() {
+            var moreInfoElements = document.querySelectorAll('.more-info');
+            var readMoreBtn = document.querySelector('.read-more-btn');
+    
+            moreInfoElements.forEach(element => {
+                if (element.style.display === 'none') {
+                    element.style.display = 'list-item';
+                    readMoreBtn.textContent = 'Read less';
+                } else {
+                    element.style.display = 'none';
+                    readMoreBtn.textContent = 'Read more';
+                }
+            });
+        }
+        </script>
 </body>
 </html>
