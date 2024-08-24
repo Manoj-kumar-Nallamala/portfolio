@@ -113,16 +113,6 @@ nav a {
     text-decoration: none;
     font-size: 1.2em;
 }
-div a {
-    margin-right: 20px; /* Adds space between the icons */
-    color: #00796b;
-    font-size: 1.5em; /* Adjust icon size if needed */
-    text-decoration: none;
-}
-
-div a:last-child {
-    margin-right: 0; /* Removes the margin after the last icon */
-}
 
 nav a:hover {
     text-decoration: underline;
@@ -162,6 +152,17 @@ nav a:hover {
         font-size: 1.2em;
     }
 }
+.social-icons a {
+    margin-right: 20px; /* Adds space between the icons */
+    color: #00796b;
+    font-size: 1.5em; /* Adjust icon size if needed */
+    text-decoration: none;
+}
+
+.social-icons a:last-child {
+    margin-right: 0; /* Removes the margin after the last icon */
+}
+
 
     </style>
     
@@ -173,12 +174,13 @@ nav a:hover {
         <div class="profile-section">
             <img src="images/profile.jpeg" alt="Manoj Kumar Nallamala">
             <h1>Manoj Kumar Nallamala</h1>
-            <div>
+            <div class="social-icons">
                 <a href="https://www.linkedin.com/in/manoj-kumar-nallamala-7b1995127/" class="fa fa-linkedin"></a>
                 <a href="https://github.com/Manoj-kumar-Nallamala" class="fa fa-github"></a>
                 <a href="mailto:manojnallamala98@gmail.com" class="fa fa-envelope"></a>
                 <a href="assets/cv.pdf" class="fa fa-file-text-o"> CV</a>
             </div>
+            
             
             <nav>
                 <a href="#research-focus">Research</a>
