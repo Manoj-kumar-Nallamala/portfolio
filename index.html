@@ -1,30 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Manoj Kumar Nallamala</title>
+    <link rel="shortcut icon" type="image/png" href="your_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f5f5f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+    
+        .container {
+            max-width: 1400px; /* Increased max-width to allow more content on the right */
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-grow: 1;
+        }
+    
+        .profile-section {
+            width: 350px; /* Size remains the same */
+            text-align: center;
+            padding: 40px 20px 20px 20px; /* Added padding at the top */
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: calc(100vh - 40px); /* Adjust height to make it fit within the viewport */
+            overflow-y: auto;
+        }
+    
+        .profile-section img {
+            border-radius: 50%;
+            width: 250px; /* Increased size */
+            height: 250px; /* Increased size */
+            object-fit: cover;
+            margin-bottom: 15px;
+            margin-top: 20px; /* Added margin to push down from the top */
+        }
+    
+        .profile-section h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            margin-bottom: 15px;
+            font-size: 2.5em; /* Slightly increased */
+            color: #00796b;
+            font-weight: 700;
+        }
+    
+        .profile-section a {
+            margin: 0 5px;
+            color: #00796b;
+            font-size: 1.5em; /* Increased icon size */
+        }
+    
+        .content-section {
+            margin-left: 400px; /* Adjusted to accommodate the fixed profile section */
+            padding-left: 20px;
+            flex-grow: 1;
+            max-width: calc(100% - 420px); /* Dynamic width to utilize the remaining space */
+        }
+    
+        .content-section h2, .content-section h3, .content-section h4 {
+            font-family: 'Josefin Sans', sans-serif;
+            color: #00575a;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+    
+        .content-section p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+    
+        .content-section h4 {
+            font-size: 1.2em;
+        }
+    
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            color: #777;
+        }
+    
+        .job-section {
+            margin-bottom: 15px;
+        }
+    
+        nav a {
+            display: block;
+            margin: 10px 0;
+            color: #00796b;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
 </head>
+
 <body>
-    <header>
-        <h1>Manoj Kumar Nallamala</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="research.html">Research</a>
-        <a href="academics.html">Academics</a>
-        <a href="interests.html">Interests</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="intro">
-        <p>Welcome to my personal portfolio. Here you'll find projects, research, and more about my professional journey.</p>
+
+    <div class="container">
+        <div class="profile-section">
+            <img src="images/profile.jpeg" alt="Manoj Kumar Nallamala">
+            <h1>Manoj Kumar Nallamala</h1>
+            <div>
+                <a href="https://www.linkedin.com/in/manoj-kumar-nallamala-7b1995127/" class="fa fa-linkedin"></a>
+                <a href="https://github.com/Manoj-kumar-Nallamala" class="fa fa-github"></a>
+                <a href="mailto:manojnallamala98@gmail.com" class="fa fa-envelope"></a>
+                <a href="assets/docs/cv.pdf" class="fa fa-file-text-o"> CV</a>
+            </div>
+            
+            <nav>
+                <a href="#publications">Publications</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+            </nav>
+        </div>
+
+        <div class="content-section">
+            <section id="intro" style="margin-top: 20px;">
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500;">
+                    Hi! I am Manoj Kumar Nallamala - a recent graduate with a Master's degree in Computer Science from the <a href="https://www.uta.edu/" target="_blank" style="color: #1a0dab; text-decoration: none;">University of Texas at Arlington</a>, where I had the privilege of working at the Center of Research as an AI Research Assistant. At UTA, I was an active member of the <a href="https://www.tbp.org/" target="_blank" style="color: #1a0dab; text-decoration: none;">Tau Beta Pi Engineering Honor Society</a>, reflecting my dedication to academic excellence and innovation. My Master's thesis focused on advanced lane detection techniques, leveraging polynomial curve fitting and camera calibration methods to enhance real-time vehicular safety systems.
+                </p>
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500;">
+                    I earned my Bachelor's in Computer Science and Engineering, specializing in Data Science, from <a href="https://www.gitam.edu/" target="_blank" style="color: #1a0dab; text-decoration: none;">GITAM University, Vishakhapatnam</a>, India. My academic journey is complemented by my membership in the <a href="https://www.acm.org/" target="_blank" style="color: #1a0dab; text-decoration: none;">Association for Computing Machinery (ACM)</a>, where I actively engage with the latest developments in computing and technology.
+                </p>
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500;">
+                    Currently, I am focused on building and fine-tuning small language models with Retrieval-Augmented Generation (RAG) for applications in healthcare and nursing. My enthusiasm for AI extends beyond academia, as I have also contributed to open-source projects by developing MLOps pipelines that automate the tuning of large language models (LLMs), optimizing their performance across various domains.
+                </p>
+            </section>
+            
+            
+            
+            
+            <section id="research-focus" style="margin-top: 20px;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; color: #00575a; margin-top: 20px; margin-bottom: 10px; font-weight: 700;">
+                    Research Focus
+                </h2>
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500;">
+                    My research is centered on advancing the prediction of novel protein structures by leveraging state-of-the-art techniques in computational biology. Specifically, I focus on enhancing the prediction precision of protein structures using Graph Neural Networks (GNNs), particularly in the context of large-scale datasets such as those provided by AlphaFold’s extensive protein database. Through this work, I have successfully improved prediction accuracy by 25%, with a specific emphasis on novel structures derived from the Swiss-Prot dataset.
+                </p>
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #d32f2f; font-size: 1.1em; font-weight: 500; text-align: center;">
+                    Protein Structures + Graph Neural Networks + Predictive Precision
+                </p>
+            </section>
+            
+            
+            <section id="masters-research" style="margin-top: 20px;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; color: #00575a; margin-top: 20px; margin-bottom: 10px; font-weight: 700;">
+                    Master's Research
+                </h2>
+                <p style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500;">
+                    During my Master's, I primarily focused on:
+                </p>
+                <ol style="line-height: 1.8; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; font-weight: 500; padding-left: 20px;">
+                    <li>Development of a university-centric virtual assistant leveraging Microsoft Phi2 SLM and LLaMA-2 7B models, enhancing campus-wide communication and resource accessibility. I engineered a RAG (Retrieval-Augmented Generation) architecture and utilized Qdrant vector database to efficiently manage and retrieve embedded vectors, facilitating AI-assisted recommendations and information retrieval.</li>
+                    <li>Design and implementation of an adaptive lane detection algorithm for autonomous driving, which included advanced computer vision techniques such as Sobel edge detection and polynomial curve fitting. This project addressed real-world challenges in lane detection, achieving real-time performance and optimizing accuracy under various driving conditions.</li>
+                </ol>
+            </section>
+
+            <section id="experience" style="margin-top: 40px;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; color: #607d8b; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 1.6em;">Experience</h2>
+            
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div style="flex: 1; color: #546e7a; font-weight: 600; font-size: 1.1em;">
+                        Aug 2023 - May 2024
+                    </div>
+                    <div style="flex: 3;">
+                        <strong style="color: #263238; font-size: 1.2em;">Graduate Research Assistant</strong><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Campus AI Concierge, Texas, USA</span><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">RAG, Qdrant Vectors, Databricks, JAX, MLOps, CUDA</span>
+                    </div>
+                </div>
+            
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div style="flex: 1; color: #546e7a; font-weight: 600; font-size: 1.1em;">
+                        May 2023 - Aug 2023
+                    </div>
+                    <div style="flex: 3;">
+                        <strong style="color: #263238; font-size: 1.2em;">Data Engineering Intern</strong><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Kantola Training Solutions, Mill Valley, California</span><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Azure, Data Architecture, Self Supervised Learning</span>
+                    </div>
+                </div>
+            
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div style="flex: 1; color: #546e7a; font-weight: 600; font-size: 1.1em;">
+                        Sept 2021 - June 2022
+                    </div>
+                    <div style="flex: 3;">
+                        <strong style="color: #263238; font-size: 1.2em;">Full Stack Engineering Senior Analyst</strong><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Accenture Freight and Logistics Software, Hyderabad, Telangana</span><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Angular, RestApi's, S3, SNS, SQS, Dynatrace</span>
+                    </div>
+                </div>
+            
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div style="flex: 1; color: #546e7a; font-weight: 600; font-size: 1.1em;">
+                        June 2020 - Aug 2021
+                    </div>
+                    <div style="flex: 3;">
+                        <strong style="color: #263238; font-size: 1.2em;">Full Stack Engineering Analyst</strong><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Accenture Freight and Logistics Software, Hyderabad, Telangana</span><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Java, TypeScript, Node.js, DynamoDB, AWS Lambda, Microservices</span>
+                    </div>
+                </div>
+            
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <div style="flex: 1; color: #546e7a; font-weight: 600; font-size: 1.1em;">
+                        May 2019 - July 2019
+                    </div>
+                    <div style="flex: 3;">
+                        <strong style="color: #263238; font-size: 1.2em;">Project Intern</strong><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">Tata Consultancy Services, Hyderabad</span><br>
+                        <span style="color: #37474f; font-weight: 500; font-size: 1em;">NLTK, Reinforcement Learning</span>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+            <section id="personal-projects" style="margin-top: 40px;">
+                <h2 style="font-family: 'Josefin Sans', sans-serif; color: #607d8b; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 1.6em;">Personal Projects</h2>
+            
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #37474f; font-weight: 700; font-size: 1.3em;">Lane Detection for Autonomous Vehicles</h3>
+                    <ul style="line-height: 1.6; color: #2c3e50; font-size: 1.1em;">
+                        <li>Developed a lane detection system to enhance navigation in autonomous vehicles using Python, OpenCV, and Machine Learning.</li>
+                        <li>Implemented Sobel edge detection, sliding window search, and polynomial curve fitting, achieving real-time performance with up to 25.6 frames per second.</li>
+                        <li>Addressed challenges such as discontinuous or missing lane markings and integrated additional sensors like lidar for improved accuracy in adverse conditions.</li>
+                    </ul>
+                    <a href="https://github.com/Manoj-kumar-Nallamala/Lane-Detection" class="project-link" style="color: #1976d2; font-weight: 500; text-decoration: none;" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #37474f; font-weight: 700; font-size: 1.3em;">Shortest Job First (SJF) Scheduling Algorithm</h3>
+                    <ul style="line-height: 1.6; color: #2c3e50; font-size: 1.1em;">
+                        <li>Developed an SJF scheduling algorithm to minimize average waiting time in CPU process scheduling using Linear Regression and Exponential Averaging.</li>
+                        <li>Achieved a significant reduction in average waiting times compared to traditional methods like FCFS.</li>
+                        <li>Applied machine learning models to enhance the accuracy and efficiency of process scheduling.</li>
+                    </ul>
+                    <p class="project-link" style="color: #607d8b; font-weight: 500;">Project is private and not available on GitHub</p>
+                </div>
+            
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #37474f; font-weight: 700; font-size: 1.3em;">Fault-Tolerant 2-Phase Distributed Commit Protocol Implementation</h3>
+                    <ul style="line-height: 1.6; color: #2c3e50; font-size: 1.1em;">
+                        <li>Implemented a fault-tolerant 2-phase commit protocol to ensure transaction integrity across distributed systems.</li>
+                        <li>Enhanced system resilience by handling failures at various stages, including before and after sending 'prepare' messages.</li>
+                        <li>Developed recovery mechanisms for nodes and transaction coordinators to ensure consistent transaction states.</li>
+                    </ul>
+                    <a href="https://github.com/Manoj-kumar-Nallamala/Fully_Fault_tolerant_2-PhaseCommit/tree/master" class="project-link" style="color: #1976d2; font-weight: 500; text-decoration: none;" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #37474f; font-weight: 700; font-size: 1.3em;">Event Search and Recommendation Engine</h3>
+                    <ul style="line-height: 1.6; color: #2c3e50; font-size: 1.1em;">
+                        <li>Utilized TicketMaster API to recommend events based on user's geo-location, deployed on Amazon EC2.</li>
+                        <li>Developed a fully functional user interface for event interaction using HTML/CSS/JavaScript, Java, and MySQL/MongoDB.</li>
+                        <li>Included robust error handling, recovery mechanisms, and advanced user authentication to ensure secure access and data integrity.</li>
+                    </ul>
+                    <a href="https://github.com/Manoj-kumar-Nallamala/Event-Search-Recommendation-Engine/tree/master" class="project-link" style="color: #1976d2; font-weight: 500; text-decoration: none;" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #37474f; font-weight: 700; font-size: 1.3em;">ConvexHull Algorithm Implementation</h3>
+                    <ul style="line-height: 1.6; color: #2c3e50; font-size: 1.1em;">
+                        <li>Implemented various Convex Hull algorithms in C++ using CLion IDE, including Divide and Conquer, Graham's Scan, and Jarvis March.</li>
+                        <li>Provided configurable input sizes for benchmarking algorithm performance, ranging from 100 points to 1000 points.</li>
+                        <li>Structured source code for easy customization and further development, with detailed setup instructions for CLion configuration.</li>
+                    </ul>
+                    <a href="https://github.com/Manoj-kumar-Nallamala/Convex_Hull/tree/main" class="project-link" style="color: #1976d2; font-weight: 500; text-decoration: none;" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            </section>
+            
+            
+            
+            
+
+            <section id="academics">
+                <h2>Academics</h2>
+                <div>
+                    <h4>Master of Science in Computer Science</h4>
+                    <p><strong>University of Texas at Arlington, USA</strong> (Aug 2022 - May 2024)</p>
+                    <p>GPA: 4.0/4.0</p>
+                </div>
+
+                <div>
+                    <h4>Bachelor of Technology in Computer Science</h4>
+                    <p><strong>GITAM University, Vishakhapatnam, India</strong> (June 2016 - June 2020)</p>
+                    <p>GPA: 3.73/4.0</p>
+                </div>
+            </section>
+
+            <section id="interests">
+                <h2>Interests</h2>
+                <p>I'm passionate about AI, machine learning, and developing innovative solutions to real-world problems. Outside of work, I enjoy hiking, reading, and exploring new technologies.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p><strong>Address:</strong> 955 W President George Bush Hwy, Richardson, TX 75080</p>
+                <p><strong>Mobile:</strong> +1 4695149685</p>
+                <p><strong>Email:</strong> <a href="mailto:manojnallamala98@gmail.com">manojnallamala98@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manoj-kumar-nallamala-7b1995127/" target="_blank">manoj-kumar-nallamala-7b1995127</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Manoj-kumar-Nallamala" target="_blank">Manoj-kumar-Nallamala</a></p>
+            </section>
+        </div>
     </div>
-    <img src="images/profile.jpeg" alt="Profile Picture" class="profile-pic">
-    <footer>
-        <p>Contact me at: <a href="mailto:manojnallamala98@gmail.com">manojnallamala98@gmail.com</a></p>
-    </footer>
+
+    
+
 </body>
+
 </html>
